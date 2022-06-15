@@ -6,13 +6,26 @@
         var L = window.L;
 
         var google = L.tileLayer('https://{s}.google.com/vt/lyrs=s,h&x={x}&y={y}&z={z}', 
-            { zIndex: 50, opacity: 1, maxZoom: 24, subdomains: ["mt0", "mt1", "mt2", "mt3"] 
+            { zIndex: 50, opacity: 1, maxZoom: 24, subdomains: ["mt0", "mt1", "mt2", "mt3"],
+            attribution: 'Google Satellite'
             });
+        
+        var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a target="_blank" href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+        });
+    
+        var baseMaps = {
+            "Google satellite": google,
+            "OSM":osm
+        };
 
         var map = L.map('map', {
             center: [48.5538231,1.9302962],
             zoom: 12
-        }).addLayer(google);
+        }).addLayer(osm);
+
+        var layerControl = L.control.layers(baseMaps).addTo(map);
 
         var style = {
             color: 'yellow',
