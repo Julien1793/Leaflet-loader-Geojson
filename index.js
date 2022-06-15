@@ -27,6 +27,17 @@
 
         var layerControl = L.control.layers(baseMaps).addTo(map);
 
+        function get_random_color() 
+        {
+        var color = "";
+        for(var i = 0; i < 3; i++) {
+            var sub = Math.floor(Math.random() * 256).toString(16);
+            color += (sub.length == 1 ? "0" + sub : sub);
+        }
+        return "#" + color;
+        }
+
+        
         var style = {
             color: 'red',
             opacity: 1.0,
@@ -37,7 +48,6 @@
 
         L.Control.FileLayerLoad.LABEL = '<img class="icon" src="folder.svg" alt="file icon"/>';
         
-
         control = L.Control.fileLayerLoad({
             fitBounds: true,
             layerOptions: {
@@ -61,13 +71,19 @@
                 }
             }
         });
-        
+
         control.addTo(map);
+        
 
+        control.loader.on('data:loaded',function (event) {
+            // var layer = e.layer;
+            console.log(event.filename);
+            layerControl.addOverlay(event.layer, event.filename);
+        });
 
-        control.loader.on('data:loaded',function (e) {
-            var layer = e.layer;
-            console.log(layer);
+        control.loader.on('data:error', function (error) {
+            // Do something usefull with the error!
+            console.warn("This data can't be load");
         });
     }
 
