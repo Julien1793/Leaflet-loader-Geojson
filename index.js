@@ -28,7 +28,7 @@
         var layerControl = L.control.layers(baseMaps).addTo(map);
 
         var style = {
-            color: 'yellow',
+            color: 'red',
             opacity: 1.0,
             fillOpacity: 0.2,
             weight: 1,
