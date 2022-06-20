@@ -50,7 +50,7 @@
         
         control = L.Control.fileLayerLoad({
             fitBounds: true,
-            fileSizeLimit: 150000,
+            fileSizeLimit: 250000,
             layerOptions: {
                 style: style,
                 onEachFeature: function (feature,layer){
