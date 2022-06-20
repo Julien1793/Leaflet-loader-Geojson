@@ -77,6 +77,8 @@
         
 
         control.loader.on('data:loaded',function (event) {
+            // Randomise color on load layer to map
+            style.color = get_random_color();
             // var layer = e.layer;
             console.log(event.filename);
             layerControl.addOverlay(event.layer, event.filename);
