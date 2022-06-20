@@ -54,15 +54,13 @@
             layerOptions: {
                 style: style,
                 onEachFeature: function (feature,layer){
-                    control.loader.on('data:loaded',function (e) {
-                        console.log (e.filename);
                     let featureProperties = feature.properties;
-                    let popupHtml = `<h2>${e.filename}</h2>`;
+                    let popupHtml = '';
                     for(let property in featureProperties) {
                         popupHtml+=`<b>${property}:</b> ${featureProperties[property]}<br>`
                         }
                         layer.bindPopup(L.popup({maxHeight: 225}).setContent(popupHtml))
-                })},
+                },
 
                 pointToLayer: function (data, latlng) {
                     return L.circleMarker(
