@@ -57,7 +57,7 @@
                     control.loader.on('data:loaded',function (e) {
                         console.log (e.filename);
                     let featureProperties = feature.properties;
-                    let popupHtml = `<h1>${e.filename}</h1>`;
+                    let popupHtml = `<h2>${e.filename}</h2>`;
                     for(let property in featureProperties) {
                         popupHtml+=`<b>${property}:</b> ${featureProperties[property]}<br>`
                         }
