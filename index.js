@@ -59,7 +59,7 @@
                     for(let property in featureProperties) {
                         popupHtml+=`<b>${property}:</b> ${featureProperties[property]}<br>`
                         }
-                        layer.bindPopup(popupHtml)
+                        layer.bindPopup(L.popup({maxHeight: 225}).setContent(popupHtml))
                 },
 
                 pointToLayer: function (data, latlng) {
