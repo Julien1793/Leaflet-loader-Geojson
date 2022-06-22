@@ -2,7 +2,7 @@
 
 Leaflet : 
 - Load Geojson/KML/GPX/JSON (EPSG:4326) from local directory
-- All fields on popup
+- Get all fields on popup
 - Randomised color at load
 - Dynamic layer control
 
