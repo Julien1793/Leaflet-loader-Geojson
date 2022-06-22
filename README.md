@@ -8,4 +8,4 @@ Leaflet :
 
 => <a target="_blank" href="https://julien1793.github.io/Leaflet-loader-Geojson/"> Test me here ! </a>
 
-Source : https://github.com/makinacorpus/Leaflet.FileLayer
+Source (plugin) : https://github.com/makinacorpus/Leaflet.FileLayer
