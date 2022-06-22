@@ -86,7 +86,8 @@
 
         control.loader.on('data:error', function (error) {
             // Do something usefull with the error!
-            console.warn("This data can't be load");
+            // console.warn("This data can't be load");
+            alert("This data can't be load");
         });
     }
 
