@@ -1,4 +1,4 @@
-# Lealflet-loader-Geojson
+# Leaflet-loads-local-files
 
 Leaflet : 
 - Load Geojson/KML/GPX/JSON (EPSG:4326) from local directory
