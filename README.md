@@ -1,7 +1,7 @@
 # Leaflet-loads-local-files
 
 Leaflet : 
-- Loads Geojson/KML/GPX (EPSG:4326) from local directory
+- Loads Geojson/KML/GPX (your data must be in EPSG:4326) from local directory
 - Get all fields on popup
 - Randomised color at load
 - Dynamic layer control
